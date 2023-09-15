@@ -1,0 +1,11 @@
+    1  cd cs131/
+    2  cd Worksheet3/
+    3  touch ws3.txt
+    4  cd ..
+    5  sort -t, -k 6,6nr Global\ YouTube\ Statistics.csv | grep -E 'United States|United Kingdom|India' > cs131/Worksheet3/ws3.txt
+    6  vi cs131/Worksheet3/ws3.txt
+    7  sort -t, -k 3,3nr Global\ YouTube\ Statistics.csv | grep -E 'Sports|Education|Entertainment' >> cs131/Worksheet3/ws3.txt
+    8  vi cs131/Worksheet3/ws3.txt
+    9  cat cs131/Worksheet3/ws3.txt 
+   10  vi cs131/Worksheet3/ws3.txt 
+   11  history > cs131/Worksheet3/cmds.log
