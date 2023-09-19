@@ -1,11 +1,41 @@
-    1  cd cs131/
-    2  cd Worksheet3/
-    3  touch ws3.txt
-    4  cd ..
-    5  sort -t, -k 6,6nr Global\ YouTube\ Statistics.csv | grep -E 'United States|United Kingdom|India' > cs131/Worksheet3/ws3.txt
-    6  vi cs131/Worksheet3/ws3.txt
-    7  sort -t, -k 3,3nr Global\ YouTube\ Statistics.csv | grep -E 'Sports|Education|Entertainment' >> cs131/Worksheet3/ws3.txt
-    8  vi cs131/Worksheet3/ws3.txt
-    9  cat cs131/Worksheet3/ws3.txt 
-   10  vi cs131/Worksheet3/ws3.txt 
-   11  history > cs131/Worksheet3/cmds.log
+    1  clear
+    2  sort -t ',' -k 16,16nr Global\ YouTube\ Statistics.csv > sorted_data.csv
+    3  grep -E "United States|United Kingdom|India" sorted_data.csv > filtered_data.csv
+    4  vi filtered_data.csv 
+    5  mv filtered_data.csv ws3.txt
+    6  cat ws3.txt 
+    7  vi ws3.txt 
+    8  vi Global\ YouTube\ Statistics.csv 
+    9  sort -t ',' -k 3,3nr Global\ YouTube\ Statistics.csv > subscribers.csv
+   10  grep -E "Sports|Education|Entertainment" subscribers.csv > sorted_subscribers.csv
+   11  vi sorted_subscribers.csv 
+   12  mv sorted_subscribers.csv ws3.txt 
+   13  vi ws3.txt 
+   14  ls
+   15  cat ws3.txt 
+   16  grep -E "United States|United Kingdom|India" sorted_data.csv > filtered_data.csv
+   17  vi filtered_data.csv 
+   18  mv ws3.txt subscribers.csv
+   19  vi subscribers.csv 
+   20  ls
+   21  cat filtered_data.csv subscribers.csv > ws3.txt
+   22  cat ws3.txt 
+   23  vi ws3.txt 
+   24  cd cs131/
+   25  ls
+   26  cd Worksheet3/
+   27  ls
+   28  cat ws3.txt 
+   29  rm -r ws3.txt 
+   30  cd ..
+   31  ls
+   32  mv ws3.txt > cs131/Worksheet3/
+   33  mv ws3.txt cs131/
+   34  cd cs131/
+   35  ls
+   36  mv ws3.txt Worksheet3/
+   37  cd Worksheet3/
+   38  ls
+   39  vi ws3.txt 
+   40  cd ..
+   41  history > cs131/Worksheet3/cmds.log
