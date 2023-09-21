@@ -1,0 +1,26 @@
+    1  mkdir Assignment1
+    2  touch Assignment.txt
+    3  vi Assignment
+    4  vi Assignment.txt 
+    5  ls
+    6  mv Assignment.txt Assignment1
+    7  ls
+    8  cd Assignment1/
+    9  ls
+   10  echo $SHELL
+   11  echo $HOME
+   12  id
+   13  mkdir myDir
+   14  chmod -w myDir
+   15  cd myDir/
+   16  ls
+   17  ls -l
+   18  touch newFile.txt
+   19  cd ..
+   20  mkdir myDir2 myDir3
+   21  touch myDir2/myFile.txt
+   22  mv myDir2/myFile.txt myDir3/
+   23  free -m
+   24  cat /etc/os-release
+   25  ls -l /etc/os-release
+   26  history >> cmds.log

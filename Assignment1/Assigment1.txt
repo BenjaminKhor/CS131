@@ -1,0 +1,58 @@
+#1: Make a directory Assignment1 under your home directory and change it. All your homework for this assignment will be done there.
+
+cd cs131/
+mkdir Assignment1
+cd Assignment1/
+touch Assignment1.txt
+
+#2: Echo your current Shell using the global variable and paste the output of the command.  Which commands did you use?
+
+echo $SHELL
+/bin/bash
+
+#3: Echo your home directory path and paste the output of the command.  Which commands did you use?
+
+echo $HOME
+/mnt/scratch/FA23_CS131_Ashish/benjaminf23
+
+#4: What is your UID?  To what group(s) do you belong?  How did you find out (command used)?
+
+uid=1122(benjaminf23) gid=1122(benjaminf23) groups=1122(benjaminf23),77(S77)
+My UID is 1122(benjaminf23) and I belong to group 77.
+I used id to find my UID and group.
+
+#5: Create a new directory "myDir" under the Assignment 1 folder. Now remove "write" permission for yourself.(see chmod man page) 
+
+From this temp directory, are you allowed to cd in that directory? Can you "ls" it?  Can you "ls -l" it? Can you create files under it?
+
+mkdir myDir
+chmod -w myDir
+
+Nothing happens when I try to ls the directory. ls -l outputs total 0. I cannot create any new files under myDir
+
+#6: Create a new directory "myDir2" and create a new directory "myDir3" 
+
+mkdir myDir2 myDir3
+
+#7: Inside myDir2, create a file "myFile.txt" (use 'touch' or 'vi' command). Once done, move this file from myDir2 to myDir3 using the mv command.
+
+touch myDir2/myFile.txt
+mv myDir2/myFile.txt myDir3/
+
+#8: Find the total amount of RAM/Memory in the IBM VM using the 'free' command. Display the amount of memory in mebibytes.
+
+free -m
+I have 11325 MiB RAM/Memory
+
+#9: Identify the operating system version. Which file under /etc/ contains this information?
+
+Red Hat Enterprise Linux 8.6 (Ootpa)
+os-release contains the operating system version information
+cat /etc/os-release
+
+
+#10: What is the permission (given to all users) for the file containing the OS version information
+
+All users can read, write and execute the file containing the OS version information
+ls -l /etc/os-release
+
