@@ -1,0 +1,5 @@
+Mean (average) of the number of subscribers in United States
+2.30897e+07
+
+Mean (average) of the number of subscribers in India
+25596000
