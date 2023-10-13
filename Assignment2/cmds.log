@@ -1,0 +1,11 @@
+    1  clear
+    2  find /etc -type f > one.txt 2> two.txt
+    3  cat one.txt 
+    4  cat two.txt 
+    5  cut -d',' -f20,21 Global\ YouTube\ Statistics.csv | sort | uniq -c | sort -nr
+    6  ps - u benjaminf23
+    7  ps -u benjaminf23
+    8  vi file.txt
+    9  ps -C systemd
+   10  ps aux
+   11  history > cmds.log
