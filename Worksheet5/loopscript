@@ -1,0 +1,42 @@
+#!/bin/bash
+
+IFS=$'\n'  # Set the file separator to new lines
+
+# Initialize counters for each category
+music_count=0
+entertainment_count=0
+gaming_count=0
+comedy_count=0
+
+# Loop through the "Global YouTube Statistics.csv" file
+for line in $(cat "Global YouTube Statistics.csv"); do
+    IFS=, read -r rank youtuber subscribers video_views category title uploads country abbreviation channel_type video_views_rank country_rank channel_type_rank video_views_for_the_last_30_days lowest_monthly_earnings highest_monthly_earnings lowest_yearly_earnings highest_yearly_earnings subscribers_for_last_30_days created_year created_month created_date gross_tertiary_education_enrollment population unemployment_rate urban_population latitude longitude <<< "$line"
+
+    if [[ "$country" == "United States" ]]; then
+        case "$category" in
+            "Music")
+                echo "$line" >> "Worksheet5/United States/Music.txt"
+                ((music_count++))
+                ;;
+            "Entertainment")
+                echo "$line" >> "Worksheet5/United States/Entertainment.txt"
+                ((entertainment_count++))
+                ;;
+            "Gaming")
+                echo "$line" >> "Worksheet5/United States/Gaming.txt"
+                ((gaming_count++))
+                ;;
+            "Comedy")
+                echo "$line" >> "Worksheet5/United States/Comedy.txt"
+                ((comedy_count++))
+                ;;
+        esac
+    fi
+done
+
+# Write the counts to ws5.txt
+echo "Music: $music_count" >> "ws5.txt"
+echo "Entertainment: $entertainment_count" >> "ws5.txt"
+echo "Gaming: $gaming_count" >> "ws5.txt"
+echo "Comedy: $comedy_count" >> "ws5.txt"
+
