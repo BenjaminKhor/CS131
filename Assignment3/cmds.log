@@ -1,0 +1,131 @@
+    1  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+    2  ls
+    3  mkdir sampleFolder
+    4  ls
+    5  ls sampleFolder
+    6  cd sampleFolder/
+    7  git init
+    8  git add
+    9  touch sample.txt
+   10  git add sample.txt 
+   11  git config --global benjamin.khor@sjsu.edu
+   12  git push
+   13  git push sample.txt
+   14  cd ~/.ssh && ssh-keygen
+   15  cd ..
+   16  cd ~/.ssh && ssh-keygen
+   17  mkdir ~/.ssh
+   18  cd ~/.ssh && ssh-keygen
+   19  cat id_rsa.pub
+   20  cd ..
+   21  cd sampleFolder/
+   22  git push
+   23  git push master
+   24  git push main
+   25  git remote add origin git@github.com:BenjaminKhor/CS131.git
+   26  git push
+   27  git push main
+   28  git commit -m examepl
+   29  git config --global user.name "Benjamin Khor"
+   30  git config --global user.email "benjamin.khor@sjsu.edu"
+   31  git commit -m example
+   32  git push --set-upstream origin master
+   33  git fetch origin
+   34  git checkout master
+   35  git push origin master
+   36  git merge origin/master
+   37  git checkout master
+   38  git pull --allow-unrelated-histories
+   39  git push origin master
+   40  git pull
+   41  git push origin master
+   42  git push
+   43  git push --set-upstream origin master
+   44  git push --set-upstream origin main
+   45  c
+   46  clear
+   47  cd ..
+   48  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/passwd.fake
+   49  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/ps.fake
+   50  clear
+   51  git remote add origin git@github.com:BenjaminKhor/CS131.git
+   52  mkdir cs131
+   53  cd cs131/
+   54  cd ..
+   55  cd cs131/
+   56  git init
+   57  git remote add origin git@github.com:BenjaminKhor/CS131.git
+   58  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/ps.fake
+   59  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/passwd.fake
+   60  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+   61  mkdir sample
+   62  cd sample/
+   63  touch sample.txt
+   64  git add sample.txt 
+   65  git commit -m "Initial commit"
+   66  git push -u origin master
+   67  cd ../..
+   68  sudo apt-get install git
+   69  git clone https://github.com/BenjaminKhor/CS131.git
+   70  ls
+   71  cd cs131/
+   72  ls
+   73  cd ..
+   74  cd CS131/
+   75  ls
+   76  mkdir Assignment3
+   77  cd Assignment3/
+   78  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+   79  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/passwd.fake
+   80  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/ps.fake
+   81  touch Assignment3.txt
+   82  touch cmds.log
+   83  last >last.fake
+   84  grep 'f23' last.fake > lastf23.fake
+   85  wc -l last.fake
+   86  wc -l lastf23.fake
+   87  cat last.fake 
+   88  ls
+   89  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+   90  ls
+   91  cat last.fake.1
+   92  clear
+   93  ls
+   94  cat last.fake
+   95  rm -r last.fake
+   96  rm -r last.fake.1
+   97  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+   98  cat last.fake
+   99  clear
+  100  last > last.fake
+  101  grep 'f23' last.fake > lastf23.fake
+  102  rm last23.fake
+  103  rm -r last23.fake
+  104  ls
+  105  cat last23.fake
+  106  cat lastf23.fake
+  107  clear
+  108  ls
+  109  cat last.fake
+  110  man last
+  111  clear
+  112  ls
+  113  rm -r last.fake 
+  114  rm -r lastf23.fake 
+  115  cat passwd.fake 
+  116  clear
+  117  wget https://raw.githubusercontent.com/khanchandaniashish/CS131/main/awkdata/last.fake
+  118  cat last.fake 
+  119  wc -l last.fake 
+  120  grep 'f23' last.fake > lastf23.fake
+  121  wc -l lastf23.fake
+  140  grep "Sun" lastf23.fake | awk '{print $1}' | sort | uniq | awk 'BEGIN{print "The list of people who worked on Sunday are:"} {print} END{print "Kudos to these people for putting in the work"}'
+  141  awk '($2 ~ /23:[0-3][0-9]|04:00/){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN{print "Night Owls List:"} {print} END{print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  142  cat lastf23.fake
+  143  awk '($7 ~ /23:[0-3][0-9]|04:00/ || $9 ~ /23:[0-3][0-9]|04:00/){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN{print "Night Owls List:"} {print} END{print "Night Owls are dope. Please ensure you get enough sleep though."}'
+  144  awk '($7 >= "05:00" && $9 <= "09:00"){print $1}' lastf23.fake | sort | uniq | awk 'BEGIN{print "Early Birds List:"} {print} END{print "Early Birds are dope. Please ensure you get enough sleep though."}'
+  145  awk '/^t/{print $1}' lastf23.fake
+  146  awk '/^t/{print $1}' lastf23.fake | sort | uniq
+  147  awk -F: '$1 ~ /^a/ && $3 % 2 == 0 {print $1}' passwd.fake
+  148  sed 's/[A-Za-z0-9 ]//g' passwd.fake | sort -u
+  149  history > cmds.log 
